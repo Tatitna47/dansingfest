@@ -22,8 +22,12 @@ public class DirectionOfMoving {
         this.numbers = numbers;
     }
 
-   /* public List<Integer> getStepsWithDirection() {
-        stepsWithDirection=findDirectionOfMoving();
-        return stepsWithDirection;
-    }*/
+    public static void setNumbers(String stringFromUi) {
+        String[] stringList = stringFromUi.split(" ");
+        numbers.clear();
+        for (String oneString : stringList) {
+            Integer oneNumber = Integer.parseInt(oneString);
+            numbers.add(oneNumber);
+        }
+    }
 }
